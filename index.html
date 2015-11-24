@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header><h1>Simple Alarm Clock Online</h1></header>
+
+	<div id="watches">
+		<span id="watches-face">
+			<span class="cell" id="cell-h">00</span> <span id="col-m">:</span> <span class="cell" id="cell-m">00</span> <span id="col-s">:</span> <span class="cell" id="cell-s">00</span>			
+		</span>
+		<div id="watches-date"></div>
+	</div>
+	<div id="alarm-settings">
+		<div class="alarm-status-wrap">
+			<div id="alarm-status-box" class="alarm-status">
+				<div class="alarm-message">
+					<strong>Alarm!</strong> It's <span id="alarm-time">time</span>.
+					<hr>
+					<button class="btn btn-default" id="albtn-ok">Dismiss</button>
+					<button class="btn btn-default" id="albtn-cancel">Snooze</button>
+				</div>
+				<span id="alarm-status"></span>
+			</div>
+		</div>
+		<div class="form-inline">
+		<div class="form-group" style="white-space: nowrap;">
+			<select class="form-control" id="h-val">
+			<option value=""></option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+		</select> : <select class="form-control" id="m-val">
+			<option value=""></option>
+			<option value="0">00</option>
+			<option value="5">05</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+			<option value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option>
+			<option value="55">55</option>
+		</select>&nbsp;<button class="btn btn-success" id="set-btn">Set</button>
+		</div>
+		</div>
+		<a id="reset-btn" class="reset" href="#">Reset alarm</a>
+		<br>
+		<br>
+		<div class="audio">
+			<audio id="player">
+				<source id="player-mp3-src" src="audio/pink-perfect.mp3">
+  				<source id="player-ogg-src" src="audio/pink-perfect.ogg">
+			</audio>
+			<div>
+				<!--<label for="ringtones">Set audio:</label>-->
+				<select class="form-control" id="ringtones">
+					<option value="pink-perfect" selected>Pink: Perfect</option>
+					<option value="Jenia-Lubich-Russian-Girl">Lubich: Russian Girl</option>
+					<option value="massive_attack-teardrop">Massive Attack: Teardrop</option>
+					<option value="Leningrad-kolokola">Ленинград: Колокола</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+<script src="alarm.js"></script>
+<script>
+	var alarm = new AlarmClock();
+	alarm.init();
+</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-63174247-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
